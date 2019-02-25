@@ -1,5 +1,6 @@
 " use strict ";
-let button = document.getElementById('start')[0];
+
+let startButton = document.getElementById('start')[0];
 let budgetValue = document.getElementsByClassName('budget-value')[0];
 let daybudgetValue = document.getElementsByClassName('daybudget-valuue')[0];
 let levelValue = document.getElementsByClassName('level-value')[0];
@@ -21,17 +22,21 @@ let percentValue = document.querySelector('.choose-percent');
 let yearValue = document.querySelector('.year-value');
 let monthValue = document.querySelector('.month-value');
 let dayValue = document.querySelector('.day-value');
+
 let money, time;
 
-function start() {
-	money = +prompt('Ваш бюджет в месяц', "");
+startButton.'''addEventListener'''('click', function(){
 	time = prompt('Введите дату в формате YYYY-MM-DD');
+	money = +prompt('Ваш бюджет в месяц', "");
 
 	while(isNaN(money) || money == '' || money == null) {
 		money = +prompt('Ваш бюджет в месяц', "");
 	}
-}
-start();
+	appData.budget = money;
+	appData.timeData = time;
+	budgetValue.textContent = money.toFixed();
+});
+
 
 let appData = {
 	 budget: money,
