@@ -1,6 +1,6 @@
 " use strict ";
 
-let startButton = document.getElementById('start')[0];
+let startButton = document.getElementById('start');
 let budgetValue = document.getElementsByClassName('budget-value')[0];
 let daybudgetValue = document.getElementsByClassName('daybudget-valuue')[0];
 let levelValue = document.getElementsByClassName('level-value')[0];
@@ -25,7 +25,7 @@ let dayValue = document.querySelector('.day-value');
 
 let money, time;
 
-startButton.'''addEventListener'''('click', function(){
+startButton.addEventListener('click', function(){
 	time = prompt('Введите дату в формате YYYY-MM-DD');
 	money = +prompt('Ваш бюджет в месяц', "");
 
