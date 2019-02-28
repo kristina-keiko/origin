@@ -23,7 +23,7 @@ let yearValue = document.querySelector('.year-value');
 let monthValue = document.querySelector('.month-value');
 let dayValue = document.querySelector('.day-value');
 
-let money, time;
+let money, time;let money, time;let money, time;
 
 startButton.addEventListener('click', function(){
 	time = prompt('Введите дату в формате YYYY-MM-DD');
